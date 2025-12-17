@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Photo and Information</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<!-- Custom Confirmation Popup -->
+<div id="confirmBox" style="
+    display:none;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    text-align: center;
+    width: 280px;
+    font-family: Arial;
+">
+    <p style="font-size:18px; margin-bottom:20px;">Are you sure?</p>
+
+    <button id="cancelBtn" style="width:90px; height:35px; margin-right:10px;">Cancel</button>
+    <button id="confirmOkBtn" style="width:90px; height:35px;">OK</button>
+</div>
+
+<body>
+
+    <h2>Select a Name to Display Photo & Info</h2>
+
+    <!-- Dropdown -->
+    <select id="nameSelect" style="height:40px; width:320px;">
+        <option value="">-- Select Name --</option>
+
+        <!-- Earlier personalities -->
+        <option value="guido">Guido van Rossum (Python)</option>
+        <option value="dennis">Dennis M. Ritchie (C)</option>
+        <option value="james">James Gosling (Java)</option>
+        <option value="stroustrup">Bjarne Stroustrup (C++)</option>
+        <option value="juergen">Juergen Hoeller (Spring Framework)</option>
+        <option value="krishna">E Krishna Rao Patro (JFS Trainer)</option>
+
+        <!-- New personalities -->
+        <option value="bill_gates">Bill Gates (Microsoft)</option>
+        <option value="steve_jobs">Steve Jobs (Apple)</option>
+        <option value="elon_musk">Elon Musk (Tesla/SpaceX)</option>
+        <option value="zukerberg">Mark Zuckerberg (Facebook)</option>
+        <option value="linus_torvalds">Linus Torvalds (Linux)</option>
+        <option value="tim_berner">Tim Berners-Lee (WWW)</option>
+        <option value="Sundar_Pichai">Sundar Pichai (Google CEO)</option>
+        <option value="satyanadella">Satya Nadella (Microsoft CEO)</option>
+        <option value="AdaLovelace">Ada Lovelace</option>
+        <option value="madhu">Madhu (JFS Trainer)</option>
+        <option value="poojitha">Poojitha Sai Sree</option>
+
+    </select>
+
+    <!-- OK Button (outside select!) -->
+    <button id="okBtn" style="height:40px; width:100px; margin-left:10px;">OK</button>
+
+    <div class="container">
+
+        <!-- LEFT BOX: PHOTO -->
+        <div class="photo-box">
+            <img id="photo" src="" alt="Person Photo" style="display:none;">
+        </div>
+
+        <!-- RIGHT BOX: INFORMATION -->
+        <div class="info-box" id="infoBox">
+            <span class="title">Person Information</span>
+            <p id="infoText">Please select a person and click OK.</p>
+        </div>
+
+    </div>
+
+    <script src="js/myjs.js"></script>
+
+</body>
+</html>
+
